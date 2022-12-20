@@ -1,0 +1,22 @@
+Two types of Ioc Container:
+
+core container: (I)BeanFactory(legacy)
+			   
+
+
+
+j2ee:           (I)ApplicationContext
+1)Add dependencies in pom.xml --->spring-context
+-->ClassPathXmlApplicationContext implemenation class
+	container will read all config file inside classpath nothing but
+	inside src spring will see which object to be created in xml file with passed to
+	ClassPathXmlApplicationContext.
+
+	constructor will be called spring is created object.
+
+
+
+
+
+
+

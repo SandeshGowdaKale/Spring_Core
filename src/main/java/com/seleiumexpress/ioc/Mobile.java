@@ -1,25 +1,17 @@
 package com.seleiumexpress.ioc;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class Mobile {
 	
 	public static void main(String[] args) {
-		//Note: not a Good practice because every time we have to write again and again
+		//now without touching source code we have configure
+		//with the help of Spring
 		
-		Airtel airtel = new  Airtel();
-		airtel.call();
-		airtel.data();
+		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+		System.out.println("Config Loaded");
 		
-		System.out.println("-----------------------------------------------");
 		
-		Vodafone vodafone = new Vodafone();
-		vodafone.call();
-		vodafone.data();  
-		System.out.println("-----------------------------------------------");
-
-		//Good Practice
-		
-		Sim sim = new Airtel();  //only i have change here vodaphone,Jio
-		sim.call();
-		sim.data();	
 	}
 }
