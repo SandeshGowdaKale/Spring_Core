@@ -12,10 +12,9 @@ public class Mobile {
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		System.out.println("Config Loaded");
 
-		Airtel airtel = (Airtel) context.getBean("airtel");
-		airtel.call();
-		airtel.data();
-		
+		Vodafone vodafone = context.getBean("vodafone", Vodafone.class);
+		vodafone.call();
+		vodafone.data();
 
 	}
 }
