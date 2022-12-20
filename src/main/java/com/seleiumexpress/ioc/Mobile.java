@@ -12,9 +12,11 @@ public class Mobile {
 		ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
 		System.out.println("Config Loaded");
 
-		Vodafone vodafone = context.getBean("vodafone", Vodafone.class);
-		vodafone.call();
-		vodafone.data();
+		// Good Pratice
+
+		Sim sim = context.getBean("sim", Sim.class);
+		sim.call();
+		sim.data();
 
 	}
 }
